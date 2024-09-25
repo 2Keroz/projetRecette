@@ -1,0 +1,235 @@
+/* Style global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #ffb347;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  gap:20px;
+  box-sizing: border-box;
+}
+
+.addrecette, .recettes {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* Style pour le formulaire */
+.addrecette {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.addrecette h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.addrecette form div {
+  margin-bottom: 15px;
+}
+
+.addrecette label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.addrecette input, .addrecette textarea, .addrecette select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.addrecette button {
+  background-color: #ffb347;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.addrecette button:hover {
+  background-color: #ff9b2e;
+}
+
+/* Style pour les recettes */
+.recettes {
+  width: 50%;
+}
+
+.recette-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.recette-card h3 {
+  margin: 0;
+  cursor: pointer;
+  color: #ff6f61;
+}
+
+.recette-card p {
+  display: none;
+  margin: 10px 0;
+}
+
+.recette-card.active p {
+  display: block;
+}
+
+.recette-card button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.recette-card button:hover {
+  background-color: #ff5345;
+}
+
+/* Style pour la liste de recettes */
+#recettes-list {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+
+textarea {
+  width: 100%; /* Prend toute la largeur du conteneur */
+  height: 100px; /* Ajuste la hauteur selon tes besoins */
+  resize: none; /* Désactive le redimensionnement */
+  box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
+}
+
+.auth-buttons {
+  margin-top: 10px; /* Espace au-dessus des boutons */
+  display: flex; /* Utilise flexbox pour aligner les boutons */
+}
+
+.auth-buttons button {
+  flex: 1; /* Prend la même largeur pour tous les boutons */
+  margin-right: 10px; /* Espace entre les boutons */
+  padding: 10px 15px; /* Padding pour les boutons */
+  border: none; /* Supprime la bordure par défaut */
+  border-radius: 5px; /* Arrondir les coins */
+  background-color: #007BFF; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  cursor: pointer; /* Change le curseur au survol */
+}
+
+.auth-buttons button:last-child {
+  margin-right: 0; /* Supprime l'espace à droite du dernier bouton */
+}
+
+.auth-buttons button:hover {
+  background-color: #0056b3; /* Couleur au survol */
+}
+
+
+/* Styles de la modal */
+.modal {
+  display: none; /* Masqué par défaut */
+  position: fixed; /* Reste en place */
+  z-index: 1; /* Au-dessus des autres contenus */
+  left: 0;
+  top: 0;
+  width: 100%; /* Pleine largeur */
+  height: 100%; /* Pleine hauteur */
+  overflow: auto; /* Ajoute une barre de défilement si nécessaire */
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Centré */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px; /* Largeur de la modal */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Ombre pour la modal */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styles pour le formulaire */
+#userForm, #loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#userForm input, #loginForm input  {
+  margin-bottom: 10px; /* Espace entre les champs */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#userForm button, #loginForm button {
+  background-color: #28a745; /* Couleur de fond pour le bouton de création */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#userForm button:hover,#loginForm button:hover  {
+  background-color: #218838; /* Couleur au survol pour le bouton de création */
+}
+
+
+#logout-button{
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+#logout-button:hover {
+  background-color: #ff5345;
+}
